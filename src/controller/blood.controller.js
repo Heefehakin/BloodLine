@@ -58,8 +58,8 @@ exports.hasDonatedBefore = async (req, res) => {
 //Get all Blood samples
 exports.getAll = async (req, res) => {
     try {
-      const bloodApplications = await bloodApplications.find();
-      return res.status(200).json({data: bloodApplications, length: bloodApplications.length});
+      const bloodApplication = await bloodApplications.find();
+      return res.status(200).json({data: bloodApplication, length: bloodApplication.length});
     } catch (error) {
       console.error(error);
       return res.status(500).json({ message: "Server Error" });
